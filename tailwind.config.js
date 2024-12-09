@@ -20,6 +20,7 @@ export default {
       },
       boxShadow: {
         navbar: '0px 4px 4px 0px #FA705526',
+        contact: '0px 4px 4px 8px #FA705540'
       },
       
     },

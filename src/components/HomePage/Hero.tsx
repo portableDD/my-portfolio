@@ -1,23 +1,14 @@
-import { useContext } from "react";
 import Dp from "../../assets/myDp.png";
-import AllContext from "../../features/AllContext";
-import IconCircle from "../../ui/IconCircle";
-import Button from "../../ui/ Button";
+import Button from "../../ui/Button";
 import Typewritter from "../../ui/Typewriter";
+import SocialIcon from "../../ui/SocialIcon";
 
 const Hero = () => {
-  const { NavIcon } = useContext(AllContext);
   return (
     <div className="flex flex-col-reverse gap-5 sm:flex-row justify-evenly items-center rounded-lg ">
       {/* icon */}
       <div className="flex sm:flex-col gap-3 text-peach">
-        {NavIcon.map((icon, index) => (
-          <IconCircle key={index}>
-            <a href={icon.path} target="blank">
-              <icon.icon />
-            </a>
-          </IconCircle>
-        ))}
+        <SocialIcon />
       </div>
       {/* name and title */}
       <div className="flex flex-col gap-3 ">
@@ -42,8 +33,8 @@ const Hero = () => {
       </div>
 
       {/* hero img384 320 */}
-      <div className="h-[350px] w-[365px] overflow-y-hidden" >
-        <img src={Dp} alt="my Dp" className="-mt-[80px] w-[100%]"/>
+      <div className="h-[350px] w-[365px] overflow-y-hidden">
+        <img src={Dp} alt="my Dp" className="-mt-[80px] w-[100%]" />
       </div>
     </div>
   );
