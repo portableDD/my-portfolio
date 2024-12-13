@@ -3,7 +3,7 @@ const OverviewAbout = () => {
     <div className="mt-8 flex flex-col gap-3">
       <h1 className="text-3xl">OVERVIEW</h1>
       <p>
-        My name is Emmanuel Dorcas Temitope. I'm a passionate frontend developer
+        My name is Emmanuel Dorcas Temitope. I'm a passionate Frontend developer
         and UI/UX designer with a love for creating beautiful, functional
         digital experiences. My journey into tech began with a fascination for
         how things work on the web, and over time, I honed my skills in React

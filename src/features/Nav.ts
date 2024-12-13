@@ -17,6 +17,7 @@ import { GrReactjs } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 import { PiCodeFill } from "react-icons/pi";
 import { RiQuillPenFill, RiTailwindCssFill } from "react-icons/ri";
+// import { SiNestjs } from "react-icons/si";
 
 export const nav: { name: string; path: string }[] = [
   {
@@ -105,6 +106,7 @@ export const ContactIcons: {
 
 export const Stack: { icons: IconType; stack: string }[] = [
   { icons: PiCodeFill, stack: "FRONTEND DEVELOPER" },
+  // { icons: PiCodeFill, stack: "BackEND DEVELOPER" },
   { icons: RiQuillPenFill, stack: "UI/UX Designer" },
 ];
 
@@ -117,5 +119,6 @@ export const SkillDetails: { icons: IconType; skill: string }[] = [
   { icons: FaHtml5, skill: "HTML" },
   { icons: FaBootstrap, skill: "Bootstrap" },
   { icons: FaNodeJs, skill: "Node Js" },
+  // { icons: SiNestjs, skill: "Nest Js" },
   { icons: RiQuillPenFill, skill: "UI/UX Design" },
 ];

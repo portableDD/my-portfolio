@@ -7,10 +7,8 @@ const SocialIcon = () => {
   return (
     <>
       {NavIcon.map((icon, index) => (
-        <IconCircle key={index}>
-          <a href={icon.path} target="blank">
-            <icon.icon />
-          </a>
+        <IconCircle key={index} path={icon.path} >
+          <icon.icon />
         </IconCircle>
       ))}
     </>

@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import ContactCircle from "./ContactIcon";
+import { Link } from "react-router-dom";
 
 interface IconProps {
   label: string;
@@ -11,14 +12,14 @@ interface IconProps {
 const CircularIcon = ({ label, Icon, position, path }: IconProps) => {
   return (
     <div
-      className="absolute "
+      className="absolute"
       style={position} // Dynamically set position
       title={label} // Tooltip for accessibility
     >
       <ContactCircle>
-        <a href={path} target="blank">
+        <Link to={path} target="blank" rel="noopener noreferrer">
           <Icon />
-        </a>
+        </Link>
       </ContactCircle>
     </div>
   );
