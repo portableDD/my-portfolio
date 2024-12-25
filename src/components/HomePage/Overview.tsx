@@ -3,7 +3,7 @@ import AllSkill from "../../ui/AllSkill";
 const Overview = () => {
   return (
     <div className="md:px-6 mt-8 flex flex-col gap-3">
-      <h1 className="text-3xl">OVERVIEW</h1>
+      <h2 className="text-3xl">OVERVIEW</h2>
       <p>
         My name is Emmanuel Dorcas Temitope. I'm a passionate frontend developer
         and UI/UX designer with a love for creating beautiful, functional

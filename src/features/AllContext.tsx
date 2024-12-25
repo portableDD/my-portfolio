@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { ContactIcons, nav, SkillDetails, Stack } from "./Nav";
+import { ContactIcons, nav, ProjectDetails, SkillDetails, Stack } from "./Nav";
 import { NavIcon } from "./Nav";
 
 interface AllContextType {
@@ -7,7 +7,8 @@ interface AllContextType {
   NavIcon: typeof NavIcon;
   SkillDetails: typeof SkillDetails;
   Stack: typeof Stack;
-  ContactIcons: typeof ContactIcons
+  ContactIcons: typeof ContactIcons;
+  ProjectDetails: typeof ProjectDetails;
 }
 
 const AllContext = createContext({} as AllContextType);
@@ -18,7 +19,16 @@ type AllContextProps = {
 
 export const AllContextProvider = ({ children }: AllContextProps) => {
   return (
-    <AllContext.Provider value={{ nav, NavIcon, SkillDetails, Stack, ContactIcons }}>
+    <AllContext.Provider
+      value={{
+        nav,
+        NavIcon,
+        SkillDetails,
+        Stack,
+        ContactIcons,
+        ProjectDetails,
+      }}
+    >
       {children}
     </AllContext.Provider>
   );

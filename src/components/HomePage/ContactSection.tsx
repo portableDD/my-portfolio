@@ -13,9 +13,9 @@ const ContactSection = () => {
         <img src={Arrow} alt="connector arrow" />
       </div>
       <div className="sm:self-end md:ml-8">
-        <Button >
-          <Link to={'/contact'}>
-            Contact <FaArrowRight className="inline" />
+        <Button>
+          <Link to={"/contact"} className="flex gap-3 items-center">
+            Contact <FaArrowRight />
           </Link>
         </Button>
       </div>
