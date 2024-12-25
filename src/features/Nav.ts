@@ -13,6 +13,7 @@ import {
   FaNodeJs,
   FaHtml5,
   FaEye,
+  FaFigma,
 } from "react-icons/fa";
 import { GrReactjs } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
@@ -23,6 +24,7 @@ import Vuesax from "../assets/projects/vuesax.png";
 import Underwriter from "../assets/projects/underwrtier.png";
 import MiniStore from "../assets/projects/mini-store.png";
 import Hosipital from "../assets/projects/hospital.png";
+import Surglife from "../assets/projects/surglife.svg";
 import { SiReactrouter } from "react-icons/si";
 import { FaChartBar } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
@@ -259,25 +261,25 @@ export const ProjectDetails: {
   },
   {
     id: 5,
-    imageSrc: Hosipital,
-    projectName: "Sefa Medical",
+    imageSrc: Surglife,
+    projectName: "Surglife Medical",
     shape: true,
     pathicons: [
-      { id: 1, icon: FaEye, path: `/project/4`, target: "_self" },
+      { id: 1, icon: FaEye, path: `/project/5`, target: "_self" },
       {
         id: 2,
-        icon: FaGithub,
-        path: "https://github.com/portableDD/Sefa_medical_application",
-        target: "blank",
-      },
-      {
-        id: 3,
         icon: FiExternalLink,
-        path: "https://sefa-medical-application.vercel.app/",
+        path: "https://www.figma.com/design/qC7dNE5gqIe8BalZ42yHaU/my-app?node-id=1-914&t=56DdhJona1K2lzJO-1",
         target: "blank",
       },
     ],
-    icons: [GrReactjs, FaJs, RiTailwindCssFill, SiReactrouter, FaChartBar],
-    desc: "",
+    icons: [RiQuillPenFill, FaFigma],
+    desc: `
+     <p> Surglife Medical is a mobile application designed exclusively by me to revolutionize the way patients interact with healthcare providers. This app provides a seamless and efficient platform for users to access quick treatment, consult with doctors or nurses online, and book appointments with ease.</p>
+
+<p>It also enables patients to view their medical records at any time, ensuring that their health information is always accessible. Additionally, the app includes the functionality to schedule surgery dates online, making it a comprehensive tool for managing medical needs.</p>
+
+<p>This design demonstrates my expertise in creating intuitive and user-centered mobile application interfaces tailored for the healthcare sector. </p>
+    `,
   },
 ];
