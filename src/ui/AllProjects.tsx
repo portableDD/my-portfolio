@@ -14,7 +14,7 @@ const AllProjects = () => {
     }
   };
   return (
-    <div className="w-[85%] md:w-[90%] lg:w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 my-5">
+    <div className="w-[85%] md:w-full lg:w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 place-items-center gap-8 my-5">
       {checkLocation("/") ? (
         <>
           {HomeProject.map((project) => (

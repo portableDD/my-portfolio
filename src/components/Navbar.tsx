@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AllContext from "../features/AllContext";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const { nav } = useContext(AllContext);
+  const [mobileNav, setMobileNav] = useState<boolean>(false);
 
   const linkClass = ({ isActive }: any) =>
     isActive ? "px-6" : "hover:text-white text-[#ACAEBB] px-6 py-2";
@@ -17,7 +19,7 @@ const Navbar = () => {
         <h1>DT</h1>
       </div>
 
-      {/* nav */}
+      {/*desktop nav */}
       <nav className="hidden md:block">
         {nav.map((item) => (
           <NavLink key={item.name} to={item.path} className={linkClass}>
@@ -28,9 +30,11 @@ const Navbar = () => {
 
       {/* hamburger */}
       <div className="text-2xl md:hidden">
-        <MdMenu />
+        <MdMenu onClick={() => setMobileNav(!mobileNav)} />
       </div>
-      
+
+      {/* Mobile Nav */}
+      {mobileNav && <MobileNav nav={nav} onClose={() => setMobileNav(false)} />}
     </header>
   );
 };

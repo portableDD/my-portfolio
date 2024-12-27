@@ -22,7 +22,7 @@ const ProjectUi = ({
 }: ProjectProps) => {
   return (
     <div
-      className={`relative group w-80 h-80 overflow-hidden shadow-lg ${
+      className={`relative group w-64 h-64 lg:w-80 lg:h-80 overflow-hidden shadow-lg ${
         shape ? "rounded-full" : "rounded-xl"
       }`}
     >
