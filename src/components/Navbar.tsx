@@ -13,7 +13,7 @@ const Navbar = () => {
     isActive ? "px-6" : "hover:text-white text-[#ACAEBB] px-6 py-2";
 
   return (
-    <header className="bg-layoutBg font-semibold py-1.5 rounded-xl flex justify-evenly items-center border-b border-peach shadow-navbar">
+    <header className="sticky top-0 bg-layoutBg/95 font-semibold py-1.5 rounded-xl flex justify-evenly items-center border-b border-peach shadow-navbar backdrop-blur z-10 supports-[backdrop-filter]:bg-background/60">
       {/* logo */}
       <div className="logo font-oleo text-3xl">
         <h1>DT</h1>

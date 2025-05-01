@@ -18,14 +18,18 @@ import {
 import { GrReactjs } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 import { PiCodeFill } from "react-icons/pi";
-import { RiQuillPenFill, RiTailwindCssFill } from "react-icons/ri";
+import {
+  RiNextjsLine,
+  RiQuillPenFill,
+  RiTailwindCssFill,
+} from "react-icons/ri";
 // import { SiNestjs } from "react-icons/si";
 import Vuesax from "../assets/projects/vuesax.png";
 import Underwriter from "../assets/projects/underwrtier.png";
 import MiniStore from "../assets/projects/mini-store.png";
 import Hosipital from "../assets/projects/hospital.png";
 import Surglife from "../assets/projects/surglife.svg";
-import { SiReactrouter } from "react-icons/si";
+import { SiNestjs, SiReactrouter } from "react-icons/si";
 import { FaChartBar } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -116,7 +120,7 @@ export const ContactIcons: {
 
 export const Stack: { icons: IconType; stack: string }[] = [
   { icons: PiCodeFill, stack: "FRONTEND DEVELOPER" },
-  // { icons: PiCodeFill, stack: "BackEND DEVELOPER" },
+  { icons: PiCodeFill, stack: "Backend DEVELOPER" },
   { icons: RiQuillPenFill, stack: "UI/UX Designer" },
 ];
 
@@ -124,12 +128,13 @@ export const SkillDetails: { icons: IconType; skill: string }[] = [
   { icons: FaJs, skill: "Javascript" },
   { icons: BiLogoTypescript, skill: "Typescript" },
   { icons: GrReactjs, skill: "React JS" },
+  { icons: RiNextjsLine, skill: "Next Js" },
   { icons: RiTailwindCssFill, skill: "Tailwind CSS" },
   { icons: FaCss3, skill: "CSS" },
   { icons: FaHtml5, skill: "HTML" },
   { icons: FaBootstrap, skill: "Bootstrap" },
   { icons: FaNodeJs, skill: "Node Js" },
-  // { icons: SiNestjs, skill: "Nest Js" },
+  { icons: SiNestjs, skill: "Nest Js" },
   { icons: RiQuillPenFill, skill: "UI/UX Design" },
 ];
 
