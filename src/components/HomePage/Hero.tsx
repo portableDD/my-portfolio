@@ -17,7 +17,11 @@ const Hero = () => {
         <p className="uppercase text-2xl text-peach">
           A{" "}
           <Typewritter
-            words={["FRONT-END WEB DEVELOPER", "Ui/Ux Designer"]}
+            words={[
+              "FRONT-END WEB DEVELOPER",
+              "Ui/Ux Designer",
+              "Open Source Contributor",
+            ]}
             speed={100}
           />
         </p>
@@ -32,7 +36,7 @@ const Hero = () => {
           <Button>
             <Link
               to={
-                "https://drive.google.com/file/d/17i7QWmHysa9X8Ni_v5VLyeB1srQ39p14/view?usp=sharing"
+                "https://drive.google.com/file/d/1eybEC4k0nrqDVShQMXgH6Zic-qt1yc44/view?usp=sharing"
               }
               target="_blank"
               rel="noopener noreferrer"
