@@ -1,80 +1,84 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Menu } from 'lucide-react'
-import { navLinks, personalInfo } from '@/lib/data'
-import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { useScrollSpy } from '@/hooks/use-scroll-spy'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
+import { navLinks } from "@/lib/data";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useScrollSpy } from "@/hooks/use-scroll-spy";
+import { cn } from "@/lib/utils";
+import Logo from "@/components/Logo";
 
-const sectionIds = navLinks.map((l) => l.href.replace('#', ''))
+const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
-  const activeSection = useScrollSpy(sectionIds)
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const activeSection = useScrollSpy(sectionIds);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleNavClick = (href: string) => {
-    setOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+    setOpen(false);
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? 'bg-background/90 backdrop-blur-md border-b border-border shadow-sm'
-          : 'bg-transparent'
+          ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-transparent",
       )}
     >
       <div className="max-container flex items-center justify-between h-16 px-6 md:px-12 lg:px-20">
         {/* Logo */}
         <a
           href="#"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-          className="font-playfair text-2xl font-bold tracking-tight"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center gap-2.5 group"
+          aria-label="Back to top"
         >
-          <span className="text-peach">{personalInfo.initials}</span>
-          <span className="text-[#F0F0F0]">.</span>
+          <Logo size={32} />
+          {/* <span className="font-playfair text-lg font-bold tracking-tight text-[#F0F0F0] group-hover:text-peach transition-colors duration-200">
+            Dorcas<span className="text-peach">.</span>
+          </span> */}
         </a>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => {
-            const id = link.href.replace('#', '')
-            const isActive = activeSection === id
+            const id = link.href.replace("#", "");
+            const isActive = activeSection === id;
             return (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
                 className={cn(
-                  'px-4 py-2 text-sm rounded-md transition-colors duration-200',
+                  "px-4 py-2 text-sm rounded-md transition-colors duration-200",
                   isActive
-                    ? 'text-peach font-medium'
-                    : 'text-[#888888] hover:text-[#F0F0F0]'
+                    ? "text-peach font-medium"
+                    : "text-[#888888] hover:text-[#F0F0F0]",
                 )}
               >
                 {link.label}
               </button>
-            )
+            );
           })}
         </nav>
 
         {/* Hire Me CTA */}
         <div className="hidden md:block">
-          <Button
-            size="sm"
-            onClick={() => handleNavClick('#contact')}
-          >
+          <Button size="sm" onClick={() => handleNavClick("#contact")}>
             Hire Me
           </Button>
         </div>
@@ -89,9 +93,12 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent>
             <div className="mt-8 flex flex-col gap-1">
-              <p className="font-playfair text-xl font-bold text-peach mb-6">
-                {personalInfo.initials}.
-              </p>
+              <div className="flex items-center gap-2.5 mb-6">
+                <Logo size={28} />
+                <span className="font-playfair text-lg font-bold text-[#F0F0F0]">
+                  Dorcas<span className="text-peach">.</span>
+                </span>
+              </div>
               {navLinks.map((link) => (
                 <button
                   key={link.href}
@@ -103,7 +110,7 @@ export default function Navbar() {
               ))}
               <Button
                 className="mt-6"
-                onClick={() => handleNavClick('#contact')}
+                onClick={() => handleNavClick("#contact")}
               >
                 Hire Me
               </Button>
@@ -112,5 +119,5 @@ export default function Navbar() {
         </Sheet>
       </div>
     </header>
-  )
+  );
 }

@@ -50,6 +50,10 @@ export const metadata: Metadata = {
     description:
       'Full-stack developer and UI/UX designer specialising in React, Next.js, Node.js, and NestJS.',
   },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
   robots: {
     index: true,
     follow: true,

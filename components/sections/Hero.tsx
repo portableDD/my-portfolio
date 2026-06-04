@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord, FaWhatsapp } from 'react-icons/fa'
@@ -9,6 +10,9 @@ import { Button } from '@/components/ui/button'
 import { personalInfo, socialLinks } from '@/lib/data'
 import { useTypewriter } from '@/hooks/use-typewriter'
 import { ease } from '@/lib/animations'
+import dynamic from 'next/dynamic'
+
+const CVModal = dynamic(() => import('@/components/CVModal'), { ssr: false })
 
 const iconMap: Record<string, IconType> = {
   GitHub: FaGithub,
@@ -32,8 +36,11 @@ const cellAnim = {
 
 export default function Hero() {
   const role = useTypewriter(personalInfo.roles, 80, 40, 2200)
+  const [cvOpen, setCvOpen] = useState(false)
 
   return (
+    <>
+    <CVModal open={cvOpen} onClose={() => setCvOpen(false)} />
     <section id="hero" className="relative min-h-screen flex items-center section-padding pt-24">
       {/* Background glows */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -186,11 +193,9 @@ export default function Hero() {
                 View Work
                 <ArrowDown className="h-4 w-4" />
               </Button>
-              <Button variant="outline" className="flex-1" asChild>
-                <a href={personalInfo.cvUrl} target="_blank" rel="noopener noreferrer">
-                  <Eye className="h-4 w-4" />
-                  View CV
-                </a>
+              <Button variant="outline" className="flex-1" onClick={() => setCvOpen(true)}>
+                <Eye className="h-4 w-4" />
+                View CV
               </Button>
             </div>
           </motion.div>
@@ -198,5 +203,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    </>
   )
 }

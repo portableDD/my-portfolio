@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord, FaWhatsapp } from 'react-icons/fa'
-import { Mail, Phone } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { IconType } from 'react-icons'
 import { personalInfo, socialLinks } from '@/lib/data'
 import { fadeUp, staggerContainer, staggerItem, viewport, ease } from '@/lib/animations'
