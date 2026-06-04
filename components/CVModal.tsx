@@ -108,7 +108,7 @@ export default function CVModal({ open, onClose }: CVModalProps) {
 
           {/* Viewer panel */}
           <motion.div
-            className="fixed inset-3 sm:inset-6 z-50 flex flex-col rounded-xl overflow-hidden border border-[#2a2a2a] bg-[#1e1e1e] shadow-2xl"
+            className="fixed inset-y-4 inset-x-4 sm:inset-y-6 sm:inset-x-[8%] lg:inset-x-[18%] z-50 flex flex-col rounded-xl overflow-hidden border border-[#2a2a2a] bg-[#1e1e1e] shadow-2xl"
             initial={{ opacity: 0, scale: 0.97, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 10 }}
