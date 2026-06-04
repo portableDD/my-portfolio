@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5.1%;
+    --foreground: 0 0% 94.1%;
+    --card: 0 0% 6.7%;
+    --card-foreground: 0 0% 94.1%;
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 0 0% 94.1%;
+    --primary: 11 94% 66%;
+    --primary-foreground: 0 0% 5.1%;
+    --secondary: 0 0% 10.2%;
+    --secondary-foreground: 0 0% 94.1%;
+    --muted: 0 0% 10.2%;
+    --muted-foreground: 0 0% 53.3%;
+    --accent: 11 94% 66%;
+    --accent-foreground: 0 0% 5.1%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 13.3%;
+    --input: 0 0% 13.3%;
+    --ring: 11 94% 66%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #FA7055 #111111;
+  }
+
+  body {
+    @apply bg-background text-[#F0F0F0] font-inter antialiased;
+  }
+
+  ::selection {
+    background-color: #FA7055;
+    color: #0D0D0D;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-20;
+  }
+
+  .max-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-peach to-peach-light bg-clip-text text-transparent;
+  }
+
+  .peach-glow {
+    box-shadow: 0 0 60px rgba(250, 112, 85, 0.15);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:border-peach/40 hover:-translate-y-1;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
