@@ -1,5 +1,5 @@
 import { personalInfo, socialLinks } from '@/lib/data'
-import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 
 const iconMap: Record<string, IconType> = {
@@ -7,7 +7,6 @@ const iconMap: Record<string, IconType> = {
   LinkedIn: FaLinkedinIn,
   Behance: FaBehance,
   Discord: FaDiscord,
-  WhatsApp: FaWhatsapp,
 }
 
 export default function Footer() {

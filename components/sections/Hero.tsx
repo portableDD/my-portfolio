@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord } from 'react-icons/fa'
 import { ArrowDown, Eye, MapPin } from 'lucide-react'
 import { IconType } from 'react-icons'
 import { Button } from '@/components/ui/button'
@@ -19,7 +19,6 @@ const iconMap: Record<string, IconType> = {
   LinkedIn: FaLinkedinIn,
   Behance: FaBehance,
   Discord: FaDiscord,
-  WhatsApp: FaWhatsapp,
 }
 
 const cell = 'rounded-2xl border border-border bg-surface overflow-hidden'

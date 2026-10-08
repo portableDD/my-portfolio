@@ -4,7 +4,6 @@ export const personalInfo = {
   initials: 'ED',
   location: 'Kaduna, Nigeria',
   email: 'emmanueldorcas15@gmail.com',
-  phone: '+234 9078562988',
   bio: "I'm a Full-Stack Developer and UI/UX Designer with 4+ years of experience building digital products from end to end. My journey started in design and frontend development, then grew into full-stack expertise — I now build and maintain APIs, design systems, and complete digital experiences. I'm passionate about clean, scalable code and interfaces people actually enjoy using.",
   shortBio: 'Full-stack developer & UI/UX designer. I build APIs, craft design systems, and ship complete digital products — from backend logic to pixel-perfect interfaces.',
   roles: [
@@ -23,7 +22,6 @@ export const socialLinks = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/dorcas-emmanuel-65862b193/' },
   { label: 'Behance', url: 'https://www.behance.net/dorcastemmanuel' },
   { label: 'Discord', url: 'https://discordapp.com/users/732937548690882561' },
-  { label: 'WhatsApp', url: 'https://wa.me/qr/QRXAJCJVA5LTG1' },
 ]
 
 export const navLinks = [

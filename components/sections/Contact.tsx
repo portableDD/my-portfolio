@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaBehance, FaDiscord } from 'react-icons/fa'
 import { Mail } from 'lucide-react'
 import { IconType } from 'react-icons'
 import { personalInfo, socialLinks } from '@/lib/data'
@@ -12,7 +12,6 @@ const socialIconMap: Record<string, IconType> = {
   LinkedIn: FaLinkedinIn,
   Behance: FaBehance,
   Discord: FaDiscord,
-  WhatsApp: FaWhatsapp,
 }
 
 export default function Contact() {
@@ -117,18 +116,6 @@ export default function Contact() {
             })}
           </motion.div>
 
-          {/* Phone
-          <motion.a
-            href={`tel:${personalInfo.phone}`}
-            className="flex items-center gap-2 text-sm text-[#555] hover:text-peach transition-colors"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-          >
-            <Phone className="h-3.5 w-3.5" />
-            {personalInfo.phone}
-          </motion.a> */}
 
         </div>
       </div>
